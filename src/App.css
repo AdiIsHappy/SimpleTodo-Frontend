@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
+  background-color: #222831;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  text-align: center;
+  color: #76ABAE;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Wrapper {
+  background-color: #31363F;
+  padding: 2%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px black;
+}
+
+.Inputs {
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.InputItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 25px;
+}
+
+.InputItem label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.InputItem input {
+  padding: 8px;
+  border: none;
+  width: 250px;
+}
+
+.InputItem input:focus {
+  border: 2px solid #76ABAE;
+}
+
+.InputButton {
+  background-color: rgb(99, 99, 99);
+  color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 25px;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.InputButton:hover {
+  background-color: rgb(72, 72, 72);
+}
+
+.InputButton.active {
+  background-color: #76ABAE;
+}
+
+.InputButton.active:hover {
+  background-color: #5bcbcf;
+}
+
+
+.Actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.Filters {
+  display: flex;
+}
+
+.Filters button {
+  background-color: rgb(99, 99, 99);
+  color: white;
+  border: none;
+  border-radius: 0px;
+  padding: 8%;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.Filters .Active {
+  background-color: #76ABAE;
+}
+
+.Clear {
+  background-color: rgb(237, 78, 78);
+  color: white;
+  border: none;
+  border-radius: 0px;
+  padding: 12px;
+  cursor: pointer;
+  width: 100px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.Clear:hover {
+  background-color: rgb(240, 29, 29);
+}
+
+.TasksList {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 40vh;
+}
+
+.TaskItem {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #222831;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 5px rgb(42, 42, 42);
+}
+
+.TaskTitle {
+  color: #76ABAE;
+  font-weight: bold;
+  margin: 0px;
+  font-size: 25px;
+}
+
+.TaskDescription {
+  font-size: 14px;
+  margin: 20px 0px 0px 0px;
+  margin-top: 8px;
+  color: rgb(161, 161, 161);
+}
+
+.TaskTitleInput {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #76ABAE;
+  font-weight: bold;
+  margin: 0px;
+  color: #76ABAE;
+  font-size: 25px;
+  width: 80%;
+}
+
+.TaskDescriptionInput {
+  background: transparent;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid rgb(161, 161, 161);
+  font-size: 14px;
+  margin-top: 8px;
+  color: rgb(161, 161, 161);
+}
+
+
+.TaskActions {
+  font-size: 35px;
+  margin-left: 10px;
+}
+
+.TaskActions.Delete {
+  color: rgb(237, 78, 78);
+}
+
+.TaskActions.Delete:hover {
+  color: rgb(240, 29, 29);
+}
+
+.TaskActions.Edit {
+  color: rgb(237, 171, 78);
+}
+
+.TaskActions.Edit:hover {
+  color: rgb(240, 156, 29);
+}
+
+.TaskActions.Done {
+  color: rgb(131, 237, 78);
+}
+
+.TaskActions.Done:hover {
+  color: rgb(79, 238, 0);
 }
